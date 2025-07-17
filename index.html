@@ -10,10 +10,21 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+            background-attachment: fixed;
             color: #333;
         }
+
         header {
+            background: linear-gradient(90deg, #FF6FD8 0%, #3813C2 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.5s;
+        }
+
+          header {
             background: linear-gradient(90deg, #FF6FD8 0%, #3813C2 100%);
             color: #fff;
             padding: 60px 0;
@@ -35,50 +46,100 @@
             color: #fff;
             font-size: 1rem;
         }
+
         .container {
             max-width: 900px;
             margin: 50px auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
-            color: #FF6FD8;
             border-bottom: 2px solid #3813C2;
             padding-bottom: 8px;
-            transition: color 0.3s;
+            transition: 0.5s;
         }
-        h2:hover {
-            color: #43e97b;
-        }
+
         h3 {
             color: #3813C2;
         }
+
         ul {
             padding-left: 20px;
         }
+
         a {
             color: #FF6FD8;
             text-decoration: none;
             transition: 0.3s;
         }
+
         a:hover {
             color: #3813C2;
             text-decoration: underline;
         }
+
         section {
             margin-bottom: 40px;
         }
+
         .highlight {
-            background-color: #fef6ff;
-            padding: 15px;
-            border-left: 6px solid #FF6FD8;
-            margin-bottom: 25px;
-            transition: transform 0.3s;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #FF6FD8;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .highlight:hover {
             transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Different hover colors for each section heading */
+        section:nth-of-type(1) h2:hover { color: #FF6FD8; }
+        section:nth-of-type(2) h2:hover { color: #38f9d7; }
+        section:nth-of-type(3) h2:hover { color: #3813C2; }
+        section:nth-of-type(4) h2:hover { color: #FFA17F; }
+        section:nth-of-type(5) h2:hover { color: #43e97b; }
+        section:nth-of-type(6) h2:hover { color: #00c6ff; }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            header p, header a {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 20px;
+                margin: 30px 15px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p, header a {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -151,3 +212,4 @@
     </div>
 </body>
 </html>
+
